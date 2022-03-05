@@ -1,5 +1,5 @@
-from algorithm_training.problem_c import Task
-from .base import BaseInputTests
+from algorithm_training.ABC.c242.problem_c_retry import Task
+from tests.base import BaseInputTests
 
 
 class InputTests(BaseInputTests):

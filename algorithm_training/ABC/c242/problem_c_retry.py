@@ -1,5 +1,14 @@
 
-from operator import mod
+import functools
+
+@functools.cache
+def dynamic_programming(digit: int, number: int):
+    if number == 1:
+        return dynamic_programming(digit - 1, number) + dynamic_programming(digit - 1, number + 1)
+    elif number == 9:
+        return dynamic_programming(digit - 1, number) + dynamic_programming(digit - 1, number - 1)
+    else:
+        return dynamic_programming(digit - 1, number) + dynamic_programming(digit - 1, number) + dynamic_programming(digit - 1, number + 1)
 
 class Task:
     def run(self):
@@ -34,6 +43,13 @@ class Task:
             counter %= MOD
 
         print(counter)
+
+    def run_2(self):
+        MOD = 998244353
+        N = int(input())
+        print(dynamic_programming(N, ))
+
+
 
 if __name__ == "__main__":
     task = Task()

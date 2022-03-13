@@ -1,7 +1,11 @@
 class TaskA:
     def run(self):
-        V, A, B, C = map(int, input().split())
-        pass
+        a, b = map(int, input().split())
+        c = a * b
+        if c % 2 == 0:
+            print("Even")
+        else:
+            print("Odd")
 
 class TaskB:
     def run(self):

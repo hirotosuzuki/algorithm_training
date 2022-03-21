@@ -1,23 +1,20 @@
 import unittest
-from algorithm_training.abc import *
+from algorithm_training.abc244 import *
 from .base import BaseInputTests
 
 class InputTestsA(BaseInputTests):
     task = TaskA()
 
-    @unittest.skip("")
     def test_1(self):
         input_text = """"""
         expected = "\n"
         self._run(input_text, expected, self.task)
 
-    @unittest.skip("")
     def test_2(self):
         input_text = """"""
         expected = "\n"
         self._run(input_text, expected, self.task)
 
-    @unittest.skip("")
     def test_3(self):
         input_text = """"""
         expected = "\n"
@@ -26,72 +23,55 @@ class InputTestsA(BaseInputTests):
 class InputTestsB(BaseInputTests):
     task = TaskB()
 
-    @unittest.skip("")
     def test_1(self):
-        input_text = """"""
-        expected = "\n"
+        input_text = """4
+SSRS
+"""
+        expected = "2 -1\n"
         self._run(input_text, expected, self.task)
 
-    @unittest.skip("")
     def test_2(self):
-        input_text = """"""
-        expected = "\n"
+        input_text = """20
+SRSRSSRSSSRSRRRRRSRR
+"""
+        expected = "0 1\n"
         self._run(input_text, expected, self.task)
 
-    @unittest.skip("")
-    def test_3(self):
-        input_text = """"""
-        expected = "\n"
-        self._run(input_text, expected, self.task)
-
-
-class InputTestsC(BaseInputTests):
-    task = TaskC()
-
-    @unittest.skip("")
-    def test_1(self):
-        input_text = """"""
-        expected = "\n"
-        self._run(input_text, expected, self.task)
-
-    @unittest.skip("")
-    def test_2(self):
-        input_text = """"""
-        expected = "\n"
-        self._run(input_text, expected, self.task)
-
-    @unittest.skip("")
-    def test_3(self):
-        input_text = """"""
-        expected = "\n"
-        self._run(input_text, expected, self.task)
 
 
 class InputTestsD(BaseInputTests):
     task = TaskD()
 
-    @unittest.skip("")
     def test_1(self):
+        input_text = """R G B
+R G B
+"""
+        expected = "Yes\n"
+        self._run(input_text, expected, self.task)
+
+    @unittest.skip("")
+    def test_2(self):
         input_text = """"""
         expected = "\n"
         self._run(input_text, expected, self.task)
+
+    @unittest.skip("")
+    def test_3(self):
+        input_text = """"""
+        expected = "\n"
+        self._run(input_text, expected, self.task)
+
 
 
 class InputTestsE(BaseInputTests):
     task = TaskE()
 
-    @unittest.skip("")
     def test_1(self):
-        input_text = """"""
-        expected = "\n"
-        self._run(input_text, expected, self.task)
-
-
-class InputTestsF(BaseInputTests):
-    task = TaskF()
-
-    @unittest.skip("")
-    def test_1(self):
-        input_text = """"""
-        expected = "\n"
+        input_text = """4 4 4 1 3 2
+1 2
+2 3
+3 4
+1 4
+"""
+        expected = "4\n"
         self._run(input_text, expected, self.task)

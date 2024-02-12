@@ -1,26 +1,18 @@
 #!/usr/bin/env python3
-import math
+from functools import cache
+
+# メモ化再帰
+@cache
+def get_cost(N: int) -> int:
+    if N == 1:
+        return 0
+    else:
+        # floor演算
+        return get_cost(N//2) + get_cost((N+1)//2) + N
 
 def main():
     N = int(input())
-
-    cost = 0
-    black_boards = [N]
-    while len(black_boards) > 0 and max(black_boards) >= 2:
-        # 黒板から2以上の整数xを選ぶ
-        for num in black_boards:
-            if num >= 2:
-                x = num
-                black_boards.remove(num)
-                cost += x
-                lower = int(x/2)
-                upper = math.ceil(x/2)
-                if (lower > 1):
-                    black_boards.append(lower)
-                if (upper > 1):
-                    black_boards.append(upper)
-                break
-
+    cost = get_cost(N)
     print(cost)
 
 if __name__ == '__main__':

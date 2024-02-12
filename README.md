@@ -21,7 +21,7 @@ poetry run oj login https://atcoder.jp/
 ## accコマンド集
 ```bash
 # 問題とテストケースのダウンロード
-poetry run acc new abc001 --choice all
+poetry run acc new abc001 --choice all --template python
 
 # コンテストのページリンク取得
 poetry run acc contest
@@ -36,4 +36,34 @@ poetry run oj t -c "python3 main.py" -d ./tests/
 # python環境が複数あるので--language 5055をojに渡す
 # ojに -l 5055を渡したいので、accとpoetryの引数判定を回避するために -- -- している
 poetry run acc submit main.py -- -- -l 5055
+```
+
+```
+poetry shell
+```
+を実行しておくと `poetry run`が不要になる
+
+## テンプレート作成
+```
+cd `acc config-dir`
+mkdir <your-template-name>
+cd <your-template-name>
+touch template.json
+touch main.py
+```
+
+```json
+{
+    "task": {
+        "program": ["main.py"],
+        "submit": "main.py",
+        "static": [],
+        "testdir": "tests",
+        "cmd": "echo Hi!"
+    },
+    "contest": {
+        "static": [],
+        "cmd": "echo Ho!"
+    }
+}
 ```

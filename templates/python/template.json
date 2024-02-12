@@ -1,0 +1,13 @@
+{
+    "task": {
+        "program": ["main.py"],
+        "submit": "main.py",
+        "static": [],
+        "testdir": "tests",
+        "cmd": "echo Hi!"
+    },
+    "contest": {
+        "static": [],
+        "cmd": "echo Ho!"
+    }
+}

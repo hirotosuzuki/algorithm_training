@@ -11,7 +11,7 @@ abb abb abb abb
 
 
 B, W = map(int, input().split())
-S = list("wbwbwwbwbwbwwbw") # W: 9, B: 6
+S = list("wbwbwwbwbwbw")
 
 patterns = []
 for i in range(len(S)):
@@ -25,7 +25,7 @@ for i in range(len(S)):
         patterns.append((count_w, count_b))
 
 for w, b in patterns:
-    if (W - w) % 9 == 0 and (B - b) % 6 == 0:
+    if (W - w) % 7 == 0 and (B - b) % 5 == 0:
         print("Yes")
         exit()
 

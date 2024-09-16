@@ -79,6 +79,7 @@ class SegmentTreeRMQ(SegmentTreeADT):
         # [middle, b)
         answer_right = self.query(left, right, middle, b, node_index * 2 + 2)
         return max(answer_left, answer_right)
+
 class SegmentTreeRSQ(SegmentTreeADT):
     """
     区間の合計値を求める(Range Sum Query)
